@@ -1,0 +1,142 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.body_back {
+  background-color: beige;
+}
+
+.nav__left {
+  display: flex;
+  justify-content: center;
+  margin: 30px 20px;
+  font-size: 80px;
+  font-family: 'Londrina Shadow', cursive;
+  color: rgb(226, 99, 120);
+}
+
+.logo {
+  width: 100%;
+  height: 300px;
+}
+
+.nav__right {
+  display: flex;
+  justify-content: center;
+  margin: 30px 30px;
+  font-weight: lighter;
+}
+
+.nav__btn1 {
+  box-shadow: 0 0 5px 1px #ccc; 
+  padding: 6px;
+  border: solid 1px #3b4043;
+  border-radius: 4px;
+}
+
+.nav__btn1:hover {
+  box-shadow: 0 3px 6px 0 rgba(5, 5, 5, 0.2), 0 1px 8px 0 rgba(3, 3, 3, 0.12);
+  cursor: pointer;
+}
+
+.nav__btn2 {
+  box-shadow: 0 0 5px 1px #ccc;
+  margin: 0 20px 0 20px;
+  padding: 6px;
+  border: solid 1px #3b4043;
+  border-radius: 4px;
+}
+
+.nav__btn2:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(3, 3, 3, 0.12);
+  cursor: pointer;
+}
+
+.nav__btn3 {
+  box-shadow: 0 0 5px 1px #ccc;
+  padding: 6px;
+  border: solid 1px #3b4043;
+  border-radius: 4px;
+}
+
+.nav__btn3:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(3, 3, 3, 0.12);
+  cursor: pointer;
+}
+
+.nav__btn4 {
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline red;
+}
+
+.description {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  line-height: 15px;
+}
+
+.points {
+  display: flex;
+  justify-content: center;
+  margin: 30px 30px
+
+}
+
+.point2 {
+  margin: 0 50px 0 50px;
+}
+
+.pick-up {
+  text-align: center;
+}
+/* フッター */
+
+.footer {
+  background-color:rgb(241, 223, 225);
+  padding: 20px 0;
+}
+.copyright {
+  text-align: center;
+  font-size: 18px;
+}
