@@ -24,11 +24,23 @@
           <div class="top_pic">
             <%= image_tag("logo.png", class: :logo) %>
           </div>
-          <div class="nav__right">
-            <%= link_to "トップページ", root_path, class: :nav__btn1 %>
-            <%= link_to "ログイン", root_path, class: :nav__btn2 %>
-            <%= link_to "新規登録", root_path, class: :nav__btn3 %>
-          </div>
+          <% if user_signed_in?%>
+            <div class="nav__right">
+              <%= link_to "トップページ", root_path, class: :nav__btn1 %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn2 %>
+              <%= link_to "本の投稿", new_user_registration_path, class: :nav__btn3 %>
+              <div class="log">
+                <%= "ログイン中:"%>
+              </div>
+              <%= link_to "#{current_user.nickname}", root_path, class: :nav__btn4 %>
+            </div>
+          <%else%>
+            <div class="nav__right">
+              <%= link_to "トップページ", root_path, class: :nav__btn1 %>
+              <%= link_to "ログイン", new_user_session_path, class: :nav__btn2 %>
+              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn3 %>
+            </div>
+          <%end%>
         </div>
       </div>
     </header>
