@@ -106,6 +106,8 @@ a {
 .nav__btn4 {
   margin-left: 20px;
   margin-top: 6px;
+  color: rgb(219, 89, 111);
+  font-weight: 800;
 }
 
 .about {
@@ -136,6 +138,7 @@ a {
   text-align: center;
 }
 
+
 /* フォーム周り */
 
 .page-heading {
@@ -161,6 +164,7 @@ a {
 
 .actions{
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .form__btn{
@@ -181,9 +185,48 @@ a {
   cursor: pointer;
 }
 
+/* 
+トップページ */
 
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
 
+.card {
+  width: calc((100% - 50px) / 4);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin: 50px;
+}
 
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-decoration: underline red;
+}
+.card__summary {
+  font-size: 16px;
+}
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.user_name {
+  color: rgb(226, 99, 120);
+}
 
 
 

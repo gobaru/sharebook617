@@ -1,0 +1,21 @@
+  <div class="card">
+    <%= link_to image_tag(book.image, class: :card__img ), root_path%>
+    <div class="card__body">
+      <%= "タイトル" %><%= link_to book.title, root_path, class: :card__title%>
+      <p class="card__summary">
+        <%= "著者：" %><%= book.author %>
+      </p>
+      <p class="card__summary">
+        <%= "料金：" %><%= book.price %><%= "円" %>
+      </p>
+      <p class="card__summary">
+        <%= "出版社：" %><%= book.publisher %>
+      </p>
+      <p class="card__summary">
+        <%= "ジャンル：" %><%= book.genre.name %>
+      </p>
+      <p class="card__summary">
+        <%= "本の投稿者名：" %><%= link_to "本の投稿者名", root_path, class: :user_name %>
+      </p>
+    </div>
+  </div>
