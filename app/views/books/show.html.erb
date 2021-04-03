@@ -1,0 +1,47 @@
+<main class="main">
+  <div class="inner">
+    <div class="book__wrapper">
+      <p class="book__hedding">
+        <%= @book.title%>
+      </p>
+      <%= link_to "by プロトタイプの投稿者", root_path, class: :book__user %>
+      <% if user_signed_in? && current_user.id == @book.user_id %>
+        <div class="book__manage">
+          <%= link_to "編集する", root_path, class: :book__btn %>
+          <%= link_to "削除する", root_path, class: :book__btn %>
+        </div>
+      <%end%>
+      <div class="book__image">
+        <%= image_tag @book.image %>
+      </div>
+      <div class="book__body">
+        <div class="book__detail">
+          <p class="detail__title">著者</p>
+          <p class="detail__message">
+            <%= @book.author %>
+          </p>
+        </div>
+        <div class="book__detail">
+          <p class="detail__title">料金</p>
+          <p class="detail__message">
+            <%= @book.price %>
+          </p>
+        </div>
+        <div class="book__detail">
+          <p class="detail__title">出版社</p>
+          <p class="detail__message">
+            <%= @book.publisher %>
+          </p>
+        </div>
+        <div class="book__detail1">
+          <p class="detail__title">ジャンル</p>
+          <p class="detail__message">
+            <%= @book.genre.name %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
