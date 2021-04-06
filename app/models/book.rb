@@ -15,5 +15,6 @@ class Book < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   belongs_to :genre
+  has_many :comments, dependent: :destroy
 
 end
