@@ -7,8 +7,8 @@
       <%= link_to "by プロトタイプの投稿者", root_path, class: :book__user %>
       <% if user_signed_in? && current_user.id == @book.user_id %>
         <div class="book__manage">
-          <%= link_to "編集する", edit_book_path, class: :book__btn %>
-          <%= link_to "削除する", book_path, method: :delete, class: :book__btn %>
+          <%= link_to "編集する", edit_book_path(@book), class: :book__btn %>
+          <%= link_to "削除する", book_path(@book), method: :delete, class: :book__btn %>
         </div>
       <%end%>
       <div class="book__image">
@@ -40,6 +40,31 @@
           </p>
         </div>
       </div>
+
+
+      <div class="book__comments">
+        <% if user_signed_in? %>
+        <p class="detail__title1">コメント</p>
+            <%= form_with(model: [@book, @comment],local: true) do |f| %>
+              <div class="field">
+                <%= f.label :text, "コメント" %><br />
+                <%= f.text_field :text, id:"comment_text" %>
+              </div>
+              <div class="actions">
+                <%= f.submit "送信する", class: :form__btn %>
+              </div>
+            <% end %> 
+          <ul class="comments_lists">
+            <% @comments.each do |comment| %>
+              <li class="comments_list">
+                <%=  comment.text %>
+                <%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
+              </li>
+            <% end %>
+          </ul>
+        <%end%>
+      </div>
+   
     </div>
   </div>
 </main>

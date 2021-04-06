@@ -10,5 +10,6 @@ class User < ApplicationRecord
   end
 
   has_many :books
+  has_many :comments
 
 end
