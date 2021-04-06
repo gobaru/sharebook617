@@ -275,6 +275,8 @@ a {
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
+  border-bottom: 1px solid;;
+
 }
 
 .detail__title{
@@ -301,7 +303,32 @@ a {
   margin: 0 4px;
 }
 
+.book__comments{
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
 
+.comments_lists{
+  padding-left: 20px;
+}
+
+.comments_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+
+.comment_user{
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}
+
+.detail__title1{
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
 
 
 
